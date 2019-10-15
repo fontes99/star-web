@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './ship.module.css'
 
-const Ship = ({title, model, cost, clas})=>{
+const Ship = ({title, model, cost, clas, films})=>{
     return(
         <div className={style.Ship}>
             <h1>{title}</h1>
@@ -11,7 +11,6 @@ const Ship = ({title, model, cost, clas})=>{
             <p>{model}</p>
             <b>Cost:</b>
             <p>{cost} credits</p>
-            <br/>
         </div>
     );
 };

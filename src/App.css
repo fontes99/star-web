@@ -44,6 +44,6 @@
   font-size: 100%;
 }
 
-.selectOpt:hover::after {
-  color: red;
+.selectOpt:hover {
+  color: white;
 }

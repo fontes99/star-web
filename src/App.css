@@ -38,18 +38,11 @@
 }
 
 .selectOpt {
-  height: 50%;
   background: darkgray;
   border: none;
   padding: 10px;
-  font-size: 130%;
-  margin-right: 5px;
-  display: flex;
+  font-size: 100%;
 }
-
-/* .selectOpt:hover {
-  color: yellow;
-} */
 
 .selectOpt:hover::after {
   color: red;

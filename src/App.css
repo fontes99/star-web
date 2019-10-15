@@ -17,16 +17,40 @@
   width: 50%;
   border: none;
   padding: 10px;
+  font-size: 100%;
 }
 
 .search-button{
   background: darkgray;
   border: none;
   padding: 10px;
+  font-size: 100%;
+}
+
+.search-button:hover {
+  color: white;
 }
 
 .ships{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.selectOpt {
+  height: 50%;
+  background: darkgray;
+  border: none;
+  padding: 10px;
+  font-size: 130%;
+  margin-right: 5px;
+  display: flex;
+}
+
+/* .selectOpt:hover {
+  color: yellow;
+} */
+
+.selectOpt:hover::after {
+  color: red;
 }

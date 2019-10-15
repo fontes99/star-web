@@ -33,6 +33,13 @@ const App = () => {
   return(
     <div className="App">
       <form onSubmit={getSearch} className="search-form">
+        <select className="selectOpt">
+          <option value="starship">Starships</option>
+          <option value="planet">Planets</option>
+          <option value="species">Species</option>
+          <option value="vehicles">Vehicles</option>
+          <option value="films">Films</option>
+        </select>
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">
           Search

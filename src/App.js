@@ -7,14 +7,15 @@ const App = () => {
   const [starships, setStarships] = useState([]);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
+  const [category, setCategory] = useState('starships');
   
   useEffect( () => {
     getStarships();
-  }, [query]);
+  }, [query, category]);
 
   const getStarships = async () => {
     const response = await fetch(
-      `https://swapi.co/api/starships/?search=${query}`
+      `https://swapi.co/api/${category}/?search=${query}`
     );
     const data = await response.json();
     setStarships(data.results);
@@ -25,20 +26,27 @@ const App = () => {
     setSearch(e.target.value);
   };
 
+  const updateCategory = e =>{
+    setCategory(e.target.value);
+  }
+
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
+    setSearch('');
   };
 
   return(
     <div className="App">
       <form onSubmit={getSearch} className="search-form">
-        <select className="selectOpt">
-          <option value="starship">Starships</option>
-          <option value="planet">Planets</option>
+        <select className="selectOpt" onChange={updateCategory}>
+          <option value="starships">Starships</option>
+          <option value="people">Characters</option>
+          <option value="planets">Planets</option>
           <option value="species">Species</option>
           <option value="vehicles">Vehicles</option>
           <option value="films">Films</option>
+          
         </select>
         <input className="search-bar" type="text" value={search} onChange={updateSearch} />
         <button className="search-button" type="submit">
@@ -49,11 +57,12 @@ const App = () => {
         {starships.map(starship => (
           <Ship
             key={starship.name} 
-            title={starship.name} 
+            name={starship.name}
+            title={starship.title}
             model={starship.model}
             cost={starship.cost_in_credits}
             clas={starship.starship_class}
-            fimls={starship.fimls}
+            films={starship.films}
           />
         ))}
       </div>

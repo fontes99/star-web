@@ -1,24 +1,25 @@
 import React, {useEffect, useState} from 'react';
-import Ship from './Ship';
+import Ship from './categories/Ship';
+import People from './categories/People';
 import './App.css';
 
 const App = () => {
 
-  const [starships, setStarships] = useState([]);
+  const [items, setItems] = useState([]);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('starships');
   
   useEffect( () => {
-    getStarships();
+    getItems();
   }, [query, category]);
 
-  const getStarships = async () => {
+  const getItems = async () => {
     const response = await fetch(
       `https://swapi.co/api/${category}/?search=${query}`
     );
     const data = await response.json();
-    setStarships(data.results);
+    setItems(data.results);
     console.log(data.results)
   };
 
@@ -34,6 +35,36 @@ const App = () => {
     e.preventDefault();
     setQuery(search);
     setSearch('');
+  };
+
+  const displayItem = () => {
+    if (category === 'people') {
+      return(
+        items.map(item => (
+          <People
+            key={item.name} 
+            name={item.name}
+            birth={item.birth_year}
+            homeWorld={item.homeworld}
+            species={item.species}
+            films={item.films}
+          />
+        ))
+      )
+    }
+    return(
+      items.map(item => (
+        <Ship
+          key={item.name} 
+          name={item.name}
+          title={item.title}
+          model={item.model}
+          cost={item.cost_in_credits}
+          clas={item.starship_class}
+          films={item.films}
+        />
+      ))
+    )
   };
 
   return(
@@ -53,19 +84,11 @@ const App = () => {
           Search
         </button>
       </form>
-      <div className='ships'>
-        {starships.map(starship => (
-          <Ship
-            key={starship.name} 
-            name={starship.name}
-            title={starship.title}
-            model={starship.model}
-            cost={starship.cost_in_credits}
-            clas={starship.starship_class}
-            films={starship.films}
-          />
-        ))}
+      
+      <div className="items">
+        {displayItem()}
       </div>
+    
     </div>
   );
 };

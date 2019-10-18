@@ -6,7 +6,7 @@ const People = ({name, birth, homeWorld, species})=>{
     useEffect( () => {
         getPlanet();
         getSpecies();
-      }, []);
+      }, );
     
     const [planet, setPlanet] = useState('');
     const [specie, setSpecies] = useState('');

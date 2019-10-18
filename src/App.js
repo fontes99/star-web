@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import Ship from './categories/Ship';
 import People from './categories/People';
+import Planet from './categories/Planet';
+import Specie from './categories/Specie';
+import Vehicle from './categories/Vehicle';
+import Film from './categories/Film';
 import './App.css';
 
 const App = () => {
@@ -34,7 +38,7 @@ const App = () => {
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
-    setSearch('');
+    // setSearch('');
   };
 
   const displayItem = () => {
@@ -52,19 +56,75 @@ const App = () => {
         ))
       )
     }
-    return(
-      items.map(item => (
-        <Ship
+    else if (category === 'starships') {
+      return(
+        items.map(item => (
+          <Ship
           key={item.name} 
           name={item.name}
-          title={item.title}
           model={item.model}
           cost={item.cost_in_credits}
-          clas={item.starship_class}
-          films={item.films}
-        />
-      ))
-    )
+          crew={item.crew}
+          manufacturer={item.manufacturer}
+          pilots={item.pilots}
+          />
+        ))
+      )
+    }
+    else if (category === 'planets') {
+      return(
+        items.map(item => (
+          <Planet
+            key={item.name} 
+            name={item.name}
+            population={item.population}
+            climate={item.climate}
+            terrain={item.terrain}
+            surface_water={item.surface_water}
+          />
+        ))
+      )
+    }
+    else if (category === 'species') {
+      return(
+        items.map(item => (
+          <Specie
+            key={item.name}
+            name={item.name}
+            classification={item.classification}
+            homeworld={item.homeworld}
+            language={item.language}
+            avg_lifespan={item.average_lifespan}
+          />
+        ))
+      )
+    }
+    else if (category === 'vehicles') {
+      return(
+        items.map(item => (
+          <Vehicle
+            key={item.name} 
+            name={item.name}
+            model={item.model}
+            vehicle_class={item.vehicle_class}
+            passengers={item.passengers}
+            cargo_capacity={item.cargo_capacity}
+          />
+        ))
+      )
+    }
+    else if (category === 'films') {
+      return(
+        items.map(item => (
+          <Film
+            key={item.title}
+            title={item.title}
+            director={item.director}
+            release_date={item.release_date}
+          />
+        ))
+      )
+    }
   };
 
   return(

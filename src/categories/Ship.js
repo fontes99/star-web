@@ -1,24 +1,19 @@
 import React, {useEffect, useState} from 'react';
 import style from './item.module.css'
 
-const Ship = ({name, model, cost, crew, manufacturer, pilots})=>{
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+
+const Ship = ({name, model, cost, crew, manufacturer})=>{
     
     useEffect( () => {
-        getPilots();
-      }, );
+    }, []);
 
-    const [pilot, setPilots] = useState('');
-
-    const getPilots = async () => {
-        const response = await fetch(pilots);
-        const data = await response.json();
-        setPilots(data.name);
-        console.log(data);
-    };
-    
     return(
+        
         <div className={style.Item}>
+            <Link to='/ships'>
             <h1>{name}</h1>
+            </Link>
             <b>Model:</b>
             <p>{model}</p>
             <b>Cost:</b>
@@ -27,9 +22,8 @@ const Ship = ({name, model, cost, crew, manufacturer, pilots})=>{
             <p>{crew}</p>
             <b>Manufactured by:</b>
             <p>{manufacturer}</p>
-            <b>Known pilots:</b>
-            <p>{pilot}</p>
         </div>
+        
     );
 };
 

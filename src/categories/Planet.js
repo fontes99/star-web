@@ -6,7 +6,7 @@ const Planet = ({name, population, climate, terrain, surface_water}) => {
         <div className={style.Item}>
             <h1>{name}</h1>
             <b>Population:</b>
-            <p>{population}</p>
+            <p>{population} habitants</p>
             <b>Climate:</b>
             <p>{climate}</p>
             <b>Terrain:</b>

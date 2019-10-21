@@ -5,6 +5,7 @@ import Planet from './categories/Planet';
 import Specie from './categories/Specie';
 import Vehicle from './categories/Vehicle';
 import Film from './categories/Film';
+
 import './App.css';
 
 const App = () => {
@@ -38,7 +39,7 @@ const App = () => {
   const getSearch = e => {
     e.preventDefault();
     setQuery(search);
-    // setSearch('');
+    setSearch('');
   };
 
   const displayItem = () => {
@@ -66,7 +67,6 @@ const App = () => {
           cost={item.cost_in_credits}
           crew={item.crew}
           manufacturer={item.manufacturer}
-          pilots={item.pilots}
           />
         ))
       )
@@ -120,6 +120,7 @@ const App = () => {
             key={item.title}
             title={item.title}
             director={item.director}
+            producer={item.producer}
             release_date={item.release_date}
           />
         ))
@@ -128,28 +129,27 @@ const App = () => {
   };
 
   return(
-    <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <select className="selectOpt" onChange={updateCategory}>
-          <option value="starships">Starships</option>
-          <option value="people">Characters</option>
-          <option value="planets">Planets</option>
-          <option value="species">Species</option>
-          <option value="vehicles">Vehicles</option>
-          <option value="films">Films</option>
-          
-        </select>
-        <input className="search-bar" type="text" value={search} onChange={updateSearch} />
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form>
-      
-      <div className="items">
-        {displayItem()}
+      <div className="App">
+        <form onSubmit={getSearch} className="search-form">
+          <select className="selectOpt" onChange={updateCategory}>
+            <option value="starships">Starships</option>
+            <option value="people">Characters</option>
+            <option value="planets">Planets</option>
+            <option value="species">Species</option>
+            <option value="vehicles">Vehicles</option>
+            <option value="films">Films</option>
+            
+          </select>
+          <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+          <button className="search-button" type="submit">
+            Search
+          </button>
+        </form>
+        
+        <div className="items">
+          {displayItem()}
+        </div>
       </div>
-    
-    </div>
   );
 };
 

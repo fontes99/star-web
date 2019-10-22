@@ -1,5 +1,7 @@
-import React from 'react';
-import style from './item.module.css';
+import React, {useEffect} from 'react';
+import style from './item.module.css'
+
+import {Link} from 'react-router-dom';
 
 const Planet = ({name, population, climate, terrain, surface_water}) => {
     return(

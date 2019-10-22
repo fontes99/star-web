@@ -9,14 +9,13 @@ const Ships = ()=>{
 
     <div className={style.Back}>
         <div className={style.Pages}>
-            <Link to='/'>
-            <p>Home</p>
+            <Link to='/' style={{textDecoration: 'none'}}>
+            <h1 className='theLink'>Home</h1>
             </Link>
             <b>Model:</b>
             <b>Cost:</b>
             <b>Crew Capacity:</b>
             <b>Manufactured by:</b>
-            <b>Known pilots:</b>
         </div>
     </div>
         

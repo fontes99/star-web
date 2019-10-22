@@ -9,3 +9,15 @@
     align-items: center;
     min-width: 40%;
 }
+
+h1 {
+    color: #021646;
+}
+
+h1:hover{
+    color: #707E87;
+}
+
+h1:active {
+    color: rgb(172, 201, 199);
+}

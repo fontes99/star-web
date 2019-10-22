@@ -11,9 +11,31 @@
 }
 
 .Back{
-    display: flex;
+    float: center;
     text-align: center;
-    min-height: 100vh;
+}
+
+.Pages .theLink {
+    font-size: 30px;
+    background: none;
+    color: yellow;
+}
+
+h1 {
+    font-size: 25px;
+    color: #021646;
+}
+
+h1:hover{
+    color: #707E87;
+}
+
+h1:active {
+    color: rgb(172, 201, 199);
+}
+
+html {
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
     background-blend-mode: multiply,multiply;
+    min-height: 200vh;
 }

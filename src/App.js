@@ -34,6 +34,7 @@ const App = () => {
 
   const updateCategory = e =>{
     setCategory(e.target.value);
+    setQuery('');
   }
 
   const getSearch = e => {
@@ -140,7 +141,7 @@ const App = () => {
             <option value="films">Films</option>
             
           </select>
-          <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+          <input className="search-bar" type="text" value={search} onChange={updateSearch} placeholder='Digite aqui para pesquisar'/>
           <button className="search-button" type="submit">
             Search
           </button>

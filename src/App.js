@@ -25,7 +25,6 @@ const App = () => {
     );
     const data = await response.json();
     setItems(data.results);
-    console.log(data.results)
   };
 
   const updateSearch = e => {
@@ -106,7 +105,7 @@ const App = () => {
           <Vehicle
             key={item.name} 
             name={item.name}
-            model={item.model}
+            cost={item.cost_in_credits}
             vehicle_class={item.vehicle_class}
             passengers={item.passengers}
             cargo_capacity={item.cargo_capacity}

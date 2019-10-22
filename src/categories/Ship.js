@@ -14,12 +14,16 @@ const Ship = ({name, clas, cost, crew, manufacturer})=>{
             <Link to={`/ships/${name}`} style={{textDecoration: 'none'}}>
             <h1>{name}</h1>
             </Link>
+            
             <b>Class:</b>
             <p>{clas}</p>
+            
             <b>Cost:</b>
             <p>{cost} credits</p>
+            
             <b>Crew Capacity:</b>
             <p>{crew}</p>
+            
             <b>Manufactured by:</b>
             <p>{manufacturer}</p>
         </div>

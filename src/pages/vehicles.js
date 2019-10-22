@@ -7,7 +7,7 @@ const Vehicles = ({match}) =>{
 
     useEffect(() => {
         getInfo();
-    }, []);
+    }, );
 
     const [infos, setInfo] = useState([{}]);
 
@@ -17,7 +17,6 @@ const Vehicles = ({match}) =>{
         );
         const data = await response.json();
         setInfo(data.results[0]);
-        console.log(data.results[0])
     };
 
     return(
@@ -54,8 +53,8 @@ const Vehicles = ({match}) =>{
             <b>Length:</b>
             <p>{infos.length} meters</p>
 
-            <b>Macimum atmospheric speed</b>
-            <p>{infos.max_atmosphering_speed} m/s</p>
+            <b>Maximum atmospheric speed</b>
+            <p>{infos.max_atmosphering_speed} km/h</p>
 
             <b>Consumables:</b>
             <p>{infos.consumables}</p>

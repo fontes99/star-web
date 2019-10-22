@@ -20,7 +20,6 @@ const Species = ({match}) =>{
         );
         const data = await response.json();
         setInfo(data.results[0]);
-        console.log(data.results[0])
     };
 
     const getPlanet = async () => {

@@ -7,12 +7,10 @@ const Ships = ({match}) =>{
 
     useEffect(() => {
         getInfo();
-        console.log(match)
-    }, []);
+    }, );
 
     const [infos, setInfo] = useState([{}]);
 
-    console.log(infos.name)
 
     const getInfo = async () => {
         const response = await fetch(
@@ -20,7 +18,6 @@ const Ships = ({match}) =>{
         );
         const data = await response.json();
         setInfo(data.results[0]);
-        console.log(data.results[0])
     };
 
     return(
@@ -61,7 +58,7 @@ const Ships = ({match}) =>{
             <p>{infos.MGLT} MGLT</p>
 
             <b>Macimum atmospheric speed</b>
-            <p>{infos.max_atmosphering_speed} m/s</p>
+            <p>{infos.max_atmosphering_speed} km/h</p>
 
             <b>Hyperdrive rating:</b>
             <p>{infos.hyperdrive_rating}</p>

@@ -15,7 +15,6 @@ const Specie = ({name, classification, homeworld, language, avg_lifespan}) => {
         const response = await fetch(homeworld);
         const data = await response.json();
         setPlanet(data.name);
-        console.log(data);
     };
     
     return(
@@ -23,14 +22,18 @@ const Specie = ({name, classification, homeworld, language, avg_lifespan}) => {
             <Link to={`/species/${name}`} style={{textDecoration: 'none'}}>
             <h1>{name}</h1>
             </Link>
+
             <b>Homeworld:</b>
-            <Link to={`/planets/${name}`} style={{textDecoration: 'none'}}>
+            <Link to={`/planets/${planet}`} style={{textDecoration: 'none'}}>
             <p>{planet}</p>
             </Link>
+
             <b>Language:</b>
             <p>{language}</p>
+
             <b>Classification:</b>
             <p>{classification}</p> 
+            
             <b>Average Lifespan:</b>
             <p>{avg_lifespan} years</p>
         </div>

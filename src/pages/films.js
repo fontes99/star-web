@@ -7,7 +7,7 @@ const Films = ({match}) =>{
 
     useEffect(() => {
         getInfo();
-    }, []);
+    }, );
 
     const [infos, setInfo] = useState([{}]);
 
@@ -17,7 +17,6 @@ const Films = ({match}) =>{
         );
         const data = await response.json();
         setInfo(data.results[0]);
-        console.log(data.results[0])
     };
 
     return(

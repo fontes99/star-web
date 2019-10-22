@@ -39,3 +39,8 @@ html {
     background-blend-mode: multiply,multiply;
     min-height: 200vh;
 }
+
+p {
+    margin-right: 100px;
+    margin-left: 100px;
+}

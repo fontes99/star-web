@@ -21,8 +21,7 @@
     color: yellow;
 }
 
-h1 {
-    font-size: 25px;
+h1:active {
     color: #021646;
 }
 
@@ -30,7 +29,8 @@ h1:hover{
     color: #707E87;
 }
 
-h1:active {
+h1 {
+    font-size: 25px;
     color: rgb(172, 201, 199);
 }
 

@@ -8,10 +8,10 @@ const Ships = ()=>{
     return(
 
     <div className={style.Back}>
-        <div className={style.Pages}>
-            <Link to='/' style={{textDecoration: 'none'}}>
+        <Link to='/' style={{textDecoration: 'none'}}>
             <h1 className='theLink'>Home</h1>
-            </Link>
+        </Link>
+        <div className={style.Pages}>
             <b>Model:</b>
             <b>Cost:</b>
             <b>Crew Capacity:</b>

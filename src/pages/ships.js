@@ -7,15 +7,17 @@ const Ships = ()=>{
 
     return(
 
-    <div className={style.Pages}>
-        <Link to='/'>
-        <p>Home</p>
-        </Link>
-        <b>Model:</b>
-        <b>Cost:</b>
-        <b>Crew Capacity:</b>
-        <b>Manufactured by:</b>
-        <b>Known pilots:</b>
+    <div className={style.Back}>
+        <div className={style.Pages}>
+            <Link to='/'>
+            <p>Home</p>
+            </Link>
+            <b>Model:</b>
+            <b>Cost:</b>
+            <b>Crew Capacity:</b>
+            <b>Manufactured by:</b>
+            <b>Known pilots:</b>
+        </div>
     </div>
         
     );

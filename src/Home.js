@@ -17,11 +17,11 @@ const Home = () => {
                 <Switch>
                     <Route path='/' exact component={App}/>
                     <Route path='/ships/:id' component={Ships}/>
-                    <Route path='/planets/:id' component={Planets}/>
                     <Route path='/peoples/:id' component={Peoples}/>
-                    <Route path='/films/:id' component={Films}/>
+                    <Route path='/planets/:id' component={Planets}/>
                     <Route path='/species/:id' component={Species}/>
                     <Route path='/vehicles/:id' component={Vehicles}/>
+                    <Route path='/films/:id' component={Films}/>
                 </Switch>
             </Router>
 

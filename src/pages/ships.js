@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import style from './pages.module.css'
 
 import {Link} from 'react-router-dom';
-import { async } from 'q';
 
 const Ships = ({match}) =>{
 
@@ -12,7 +11,6 @@ const Ships = ({match}) =>{
     }, []);
 
     const [infos, setInfo] = useState([{}]);
-    const [links, setLinks] = useState([]);
 
     console.log(infos.name)
 
@@ -32,9 +30,12 @@ const Ships = ({match}) =>{
             <h1 className='theLink'>Home</h1>
         </Link>
         <div className={style.Pages}>
-      
+            
             <h1>{infos.name}</h1>
-      
+
+            <b>Class:</b>
+            <p>{infos.starship_class}</p>
+        
             <b>Model:</b>
             <p>{infos.model}</p>
 
@@ -44,11 +45,11 @@ const Ships = ({match}) =>{
             <b>Crew Capacity:</b>
             <p>{infos.crew}</p>
 
-            <b>Cargo Capacity:</b>
-            <p>{infos.cargo_capacity}</p>
-
             <b>Passengers Capacity:</b>
             <p>{infos.passengers}</p>
+
+            <b>Cargo Capacity:</b>
+            <p>{infos.cargo_capacity}</p>
 
             <b>Manufactured by:</b>
             <p>{infos.manufacturer}</p>
@@ -68,8 +69,6 @@ const Ships = ({match}) =>{
             <b>Consumables:</b>
             <p>{infos.consumables}</p>
 
-            <b>Known Pilots:</b>
-            <p>{links}</p>
         </div>
     </div>
         

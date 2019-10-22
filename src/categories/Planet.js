@@ -6,7 +6,9 @@ import {Link} from 'react-router-dom';
 const Planet = ({name, population, climate, terrain, surface_water}) => {
     return(
         <div className={style.Item}>
+            <Link to={`/planets/${name}`} style={{textDecoration: 'none'}}>
             <h1>{name}</h1>
+            </Link>
             <b>Population:</b>
             <p>{population} habitants</p>
             <b>Climate:</b>

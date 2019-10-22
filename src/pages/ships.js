@@ -28,14 +28,13 @@ const Ships = ({match}) =>{
     return(
 
     <div className={style.Back}>
-        
+        <Link to='/' style={{textDecoration: 'none'}}>
+            <h1 className='theLink'>Home</h1>
+        </Link>
         <div className={style.Pages}>
-            <Link to='/'>
-            <p>Home</p>
-            </Link>
-
+      
             <h1>{infos.name}</h1>
-
+      
             <b>Model:</b>
             <p>{infos.model}</p>
 
@@ -71,8 +70,6 @@ const Ships = ({match}) =>{
 
             <b>Known Pilots:</b>
             <p>{links}</p>
-
-
         </div>
     </div>
         

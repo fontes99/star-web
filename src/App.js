@@ -64,7 +64,7 @@ const App = () => {
           <Ship
           key={item.name} 
           name={item.name}
-          model={item.model}
+          clas={item.starship_class}
           cost={item.cost_in_credits}
           crew={item.crew}
           manufacturer={item.manufacturer}

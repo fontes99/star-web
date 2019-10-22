@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import style from './item.module.css';
 
+import {Link} from 'react-router-dom';
+
 const Specie = ({name, classification, homeworld, language, avg_lifespan}) => {
     
     useEffect( () => {
@@ -18,9 +20,13 @@ const Specie = ({name, classification, homeworld, language, avg_lifespan}) => {
     
     return(
         <div className={style.Item}>
+            <Link to={`/species/${name}`} style={{textDecoration: 'none'}}>
             <h1>{name}</h1>
+            </Link>
             <b>Homeworld:</b>
+            <Link to={`/planets/${name}`} style={{textDecoration: 'none'}}>
             <p>{planet}</p>
+            </Link>
             <b>Language:</b>
             <p>{language}</p>
             <b>Classification:</b>

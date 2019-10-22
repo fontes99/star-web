@@ -3,7 +3,7 @@ import style from './item.module.css'
 
 import {Link} from 'react-router-dom';
 
-const Ship = ({name, model, cost, crew, manufacturer})=>{
+const Ship = ({name, clas, cost, crew, manufacturer})=>{
     
     useEffect( () => {
     }, []);
@@ -14,8 +14,8 @@ const Ship = ({name, model, cost, crew, manufacturer})=>{
             <Link to={`/ships/${name}`} style={{textDecoration: 'none'}}>
             <h1>{name}</h1>
             </Link>
-            <b>Model:</b>
-            <p>{model}</p>
+            <b>Class:</b>
+            <p>{clas}</p>
             <b>Cost:</b>
             <p>{cost} credits</p>
             <b>Crew Capacity:</b>

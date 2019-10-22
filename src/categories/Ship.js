@@ -11,7 +11,7 @@ const Ship = ({name, model, cost, crew, manufacturer})=>{
     return(
         
         <div className={style.Item}>
-            <Link to='/ships'>
+            <Link to='/ships' style={{textDecoration: 'none'}}>
             <h1>{name}</h1>
             </Link>
             <b>Model:</b>

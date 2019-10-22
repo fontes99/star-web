@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import style from './item.module.css'
 
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Ship = ({name, model, cost, crew, manufacturer})=>{
     
@@ -11,7 +11,7 @@ const Ship = ({name, model, cost, crew, manufacturer})=>{
     return(
         
         <div className={style.Item}>
-            <Link to='/ships' style={{textDecoration: 'none'}}>
+            <Link to={`/ships/${name}`} style={{textDecoration: 'none'}}>
             <h1>{name}</h1>
             </Link>
             <b>Model:</b>

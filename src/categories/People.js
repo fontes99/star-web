@@ -37,12 +37,12 @@ const People = ({name, birth, homeWorld, species})=>{
 
             <b>Home Planet:</b>
             <Link to={`/planets/${planet}`} style={{textDecoration: 'none'}}>
-            <p>{planet}</p>
+            <p className={style.Planet}>{planet}</p>
             </Link>
             
             <b>Species:</b>
             <Link to={`/species/${specie}`} style={{textDecoration: 'none'}}>
-            <p>{specie}</p>
+            <p className={style.Specie}>{specie}</p>
             </Link>
         </div>
     );

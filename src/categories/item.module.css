@@ -10,14 +10,42 @@
     min-width: 40%;
 }
 
-h1 {
+.Item h1 {
     color: #021646;
 }
 
-h1:hover{
+.Item h1:hover{
     color: #707E87;
 }
 
-h1:active {
+.Item h1:active {
     color: rgb(172, 201, 199);
 }
+
+.Item .Planet {
+    color: #137e2b;
+}
+
+.Item .Planet:hover{
+    color: #707E87;
+}
+
+.Item .Planet:active {
+    color: rgb(172, 201, 199);
+}
+
+
+.Item .Specie {
+    color: #137e2b;
+}
+
+.Item .Specie:hover{
+    color: #707E87;
+}
+
+.Item .Specie:active {
+    color: rgb(172, 201, 199);
+}
+
+
+

@@ -1,16 +1,23 @@
 .Pages{
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgb(71, 71, 71);
-    margin: 40px;
+    /* margin: 40px; */
+    /* position: absolute; */
+    /* align-content: center; */
+    float: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     background: white;
     align-items: center;
     min-width: 40%;
+    margin-left: 480px;
+    margin-right: 480px;
 }
 
 .Back{
+    position: relative;
+    align-content: center;
     float: center;
     text-align: center;
 }
@@ -21,20 +28,42 @@
     color: yellow;
 }
 
-h1:active {
+.Pages h1 {
+    float: center;
+    font-size: 25px;
     color: #021646;
 }
 
-h1:hover{
+.Pages .Planet {
+    color: #137e2b;
+}
+
+.Pages .Planet:hover{
     color: #707E87;
 }
 
-h1 {
-    font-size: 25px;
+.Pages .Planet:active {
     color: rgb(172, 201, 199);
 }
 
+.theLink {
+    padding-left: 3%;
+    font-size: 20px;
+    /* color: rgb(172, 201, 199); */
+    color: #024f74;
+}
+
+.theLink:hover {
+    color: #707E87;
+}
+
+.theLink:active {
+    color: #021646;
+}
+
+
 html {
+    align-content: center;
     background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
     background-blend-mode: multiply,multiply;
     min-height: 200vh;

@@ -24,7 +24,9 @@ const Planets = ({match}) =>{
 
     <div className={style.Back}>
         <Link to='/' style={{textDecoration: 'none'}}>
-            <h1 className='theLink'>Home</h1>
+            <div className={style.theLink}>
+                <h1>Home</h1>
+            </div>
         </Link>
         <div className={style.Pages}>
             

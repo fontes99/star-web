@@ -25,7 +25,7 @@ const Specie = ({name, classification, homeworld, language, avg_lifespan}) => {
 
             <b>Homeworld:</b>
             <Link to={`/planets/${planet}`} style={{textDecoration: 'none'}}>
-            <p>{planet}</p>
+            <p className={style.Planet}>{planet}</p>
             </Link>
 
             <b>Language:</b>

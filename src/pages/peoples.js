@@ -39,7 +39,9 @@ const Peoples = ({match}) =>{
 
     <div className={style.Back}>
         <Link to='/' style={{textDecoration: 'none'}}>
-            <h1 className='theLink'>Home</h1>
+            <div className={style.theLink}>
+                <h1>Home</h1>
+            </div>
         </Link>
         <div className={style.Pages}>
             
@@ -68,7 +70,7 @@ const Peoples = ({match}) =>{
 
             <b>Home World:</b>
             <Link to={`/planets/${planet}`} style={{textDecoration: 'none'}}>
-            <p>{planet}</p>
+            <p className={style.Planet}>{planet}</p>
             </Link>
 
             <b>Species:</b>
